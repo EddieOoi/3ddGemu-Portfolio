@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - Spaceship Xtreme</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/3DDGamuStudioPixelLogo.png" rel="icon">
+  <link href="assets/img/3DDGamuStudioPixelLogo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+        <h1>Spaceship Xtreme (C++ / DirectX)</h1>
+        <h4>
+          2D Bullet Hell Survivor Game built with Microsoft DirectX
+        </h4>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/spaceshipxtreme/sx1.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/spaceshipxtreme/sx2.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/spaceshipxtreme/sx3.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/spaceshipxtreme/sx4.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/portfolio/spaceshipxtreme/sx5.png" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>About the Project</h2>
+              <p>
+                <strong>Spaceship Xtreme</strong> is a 2D bullet hell survivor game developed in C++ using Microsoft DirectX 11 API. 
+                The project demonstrates real-time rendering, input handling, and basic physics simulation inspired by arcade-style survival gameplay.
+                It was created as part of our <strong>Computer Game Programming</strong> course.
+              </p>
+                 <h3>Executive Summary</h3>
+              <ul>
+                <li>3 progressive gameplay phases with increasing difficulty.</li>
+                <li>Player can choose spaceship color and crosshair style.</li>
+                <li>Includes physics for motion, friction, elastic collision, and asteroid behavior.</li>
+                <li>3 power-up types: <strong>Health</strong>, <strong>Attack</strong>, and <strong>Defense</strong>.</li>
+                <li>Sound cues for shooting, collision, and power-up effects.</li>
+              </ul>
+
+            <h3>Gameplay Highlights</h3>
+              <p>
+                The player controls a spaceship to survive falling asteroids by dodging and shooting.
+                Difficulty escalates as time progresses—after 10 seconds (medium phase) and 30 seconds (doom phase).
+                The DOOM soundtrack introduces an intense atmosphere for the final phase.
+              </p>
+
+            <h3>Design Goals & Objectives</h3>
+              <p>
+                Our goal was to create an engaging and immersive survival experience through fast-paced gameplay,
+                responsive controls, and smooth physics simulation. The project explores DirectX input, 
+                2D sprite animation, and rendering optimization.
+              </p>
+            </div>      
+            <h3>Project Showcase</h3>
+              <div id = "spaceship-vid" class="ratio ratio-16x9 mb-4">
+                <video controls>
+                  <source src="assets/videos/spaceshipXtreme.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+                <ul>
+                  <li><strong>Category</strong> Game Programming</li>
+                  <li><strong>Engine/API</strong> Microsoft DirectX 11 & FMOD</li>
+                  <li><strong>Language</strong> C++</li>
+                  <li><strong>Project date</strong> July 2024</li>
+                  <li><strong>Status</strong> Completed</li>
+                  <li><a href="#spaceship-vid" class="btn-visit align-self-start">View Gameplay</a></li>
+                </ul>  
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+<footer id="footer" class="footer position-relative light-background">
+  <div class="container text-center">
+    <h3 class="sitename">Wei Kit</h3>
+    <p>Game & XR Developer crafting immersive experiences through creativity, code, and curiosity.</p>
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://www.facebook.com/eddie.ooiweikit" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/weikit_001/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/eddieooi" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/EddieOoi" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://eddieooi.itch.io/delights-despair" target="_blank"><i class="bi bi-controller"></i></a>
+    </div>
+    <div class="copyright mt-3">
+      <span>©</span> <strong class="px-1 sitename">Wei Kit</strong> <span>2025 | All Rights Reserved</span>
+    </div>
+    <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+  
+</footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

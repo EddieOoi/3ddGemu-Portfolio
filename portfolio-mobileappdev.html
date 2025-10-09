@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - ZeroWasteHub</title>
+  <meta content="ZeroWasteHub — a Flutter & Firebase mobile app promoting recycling and sustainable behaviour." name="description">
+  <meta content="ZeroWasteHub, Flutter, Firebase, mobile app, recycling, sustainability, community, Dart" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/3DDGamuStudioPixelLogo.png" rel="icon">
+  <link href="assets/img/3DDGamuStudioPixelLogo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+        <h1>ZeroWasteHub</h1>
+        <h4>Mobile app (Flutter & Firebase) to promote recycling, connect local recyclers, and reward sustainable actions.</h4>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-details-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+
+            <!-- Single demo video -->
+            <div class="swiper-slide">
+              <div class="ratio ratio-16x9 mb-4">
+                  <div class="ratio ratio-16x9">
+                    <iframe 
+                      src="https://youtube.com/embed/U2cYR634fm0" 
+                      title="Gameplay Showcase" 
+                      frameborder="0" 
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>About the Project</h2>
+              <p>
+                <strong>ZeroWasteHub</strong> is a community-focused mobile application built to encourage recycling and reduce waste. The app connects users with local recycling centres, schedules pick-ups, and rewards eco-friendly actions through a points system and in-app badges.
+              </p>
+
+              <h3>Development Overview</h3>
+              <ul>
+                <li>Built with <strong>Flutter</strong> (Dart) for cross-platform mobile delivery (Android &amp; iOS).</li>
+                <li>Backend and real-time features implemented using <strong>Firebase</strong> (Firestore, Authentication, Cloud Functions, Storage).</li>
+                <li>Features include user profiles, location-based recycler directory, photo-based item submissions, pick-up scheduling, and a points &amp; rewards system.</li>
+                <li>Focus on accessibility and low-bandwidth performance for broader community reach.</li>
+              </ul>
+
+              <h3>My Role & Contribution</h3>
+              <p>
+                I developed the full front-end UI in Flutter and integrated Firebase services for authentication, data storage, and serverless logic. 
+                Key contributions include implementing the login system, UI design, customer and admin server.
+              </p>
+
+              <h3>Impact & Vision</h3>
+              <p>
+                ZeroWasteHub aims to lower barriers to recycling by connecting users with local resources and rewarding sustainable behaviour. The project demonstrates how mobile tech can support environmental initiatives and community engagement.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong>Mobile App</li>
+                <li><strong>Type</strong>Community / Sustainability</li>
+                <li><strong>Tools</strong>Flutter, Dart, Firebase (Firestore, Auth, Cloud Functions)</li>
+                <li><strong>Project Date</strong>April, 2025</li>
+                <li><strong>Project URL</strong><a href="#">(Private / Demo)</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container text-center">
+      <h3 class="sitename">Wei Kit</h3>
+      <p>Game &amp; XR Developer &amp; Mobile App Creator — crafting experiences that combine design, code, and social impact.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/eddie.ooiweikit" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/weikit_001/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/eddieooi" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/EddieOoi" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://eddieooi.itch.io/delights-despair" target="_blank"><i class="bi bi-controller"></i></a>
+      </div>
+      <div class="copyright mt-3">
+        <span>©</span> <strong class="px-1 sitename">Wei Kit</strong> <span>2025 | All Rights Reserved</span>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
