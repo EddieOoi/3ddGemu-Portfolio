@@ -986,6 +986,29 @@ section,
   fill: #f3268c;
 }
 
+/* --- Services Icon Hover Override --- */
+
+/* 1. Apply ONLY the smooth scale effect to the icon */
+.services .service-item .icon i {
+  transition: transform 0.3s ease-in-out !important;
+}
+.services .service-item:hover .icon i {
+  transform: scale(1.25) !important; 
+}
+
+/* 2. COMPLETELY turn off the template's background SVG shape on hover */
+.services .service-item:hover .icon path {
+  fill: transparent !important;
+}
+
+/* 3. STOP the icons from turning white (force them to keep their original colors) */
+.services .service-item.item-cyan:hover .icon i { color: #0dcaf0 !important; }
+.services .service-item.item-orange:hover .icon i { color: #fd7e14 !important; }
+.services .service-item.item-teal:hover .icon i { color: #20c997 !important; }
+.services .service-item.item-red:hover .icon i { color: #df1529 !important; }
+.services .service-item.item-indigo:hover .icon i { color: #6610f2 !important; }
+.services .service-item.item-pink:hover .icon i { color: #f3268c !important; }
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
