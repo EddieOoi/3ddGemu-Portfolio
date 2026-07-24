@@ -37,11 +37,3 @@ Template Name: MyResume
 Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
 Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/
-
-## 💻 Local Setup
-
-If you'd like to inspect or run this project locally:
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/EddieOoi/3ddGemu-Portfolio.git](https://github.com/EddieOoi/3ddGemu-Portfolio.git)
