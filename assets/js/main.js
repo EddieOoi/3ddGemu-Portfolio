@@ -227,3 +227,50 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("about-intro-video");
+
+  if (video) {
+    let hasPlayed = false;
+
+    // Helper function to safely attempt playback
+    function triggerVideoPlay() {
+      if (!hasPlayed) {
+        video.play()
+          .then(() => {
+            hasPlayed = true; // Ensures it autoplays only once
+          })
+          .catch((err) => {
+            console.log("Autoplay waiting for user interaction:", err);
+          });
+      }
+    }
+
+    // 1. Intersection Observer for Scroll-based page layouts
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            triggerVideoPlay();
+          }
+        });
+      },
+      { threshold: 0.3 } // Triggers when 30% of the video is visible
+    );
+
+    observer.observe(video);
+
+    // 2. Tab Navigation Listener (for portfolio templates that use SPA tab switching)
+    const navLinks = document.querySelectorAll('.navmenu a, .nav-link, [data-page]');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', function () {
+        // Check if user clicked Resume or About tab
+        const href = this.getAttribute('href') || '';
+        if (href.includes('resume') || href.includes('about')) {
+          setTimeout(triggerVideoPlay, 400); // Small delay to wait for tab section fade-in
+        }
+      });
+    });
+  }
+});

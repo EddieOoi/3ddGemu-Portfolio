@@ -1497,3 +1497,148 @@ section,
   margin-right: auto;
   width: 80%;
 }
+
+/* ==========================================
+   Centered & Responsive Resume Button
+   ========================================== */
+
+.resume-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.glow-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 36px;
+  background-color: #0d0e15;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+  max-width: 100%; /* Prevents overflow on mobile screens */
+}
+
+/* Glowing Multi-Color Background */
+.glow-btn::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: -6px;
+  background: linear-gradient(
+    45deg,
+    #ff007f,
+    #7928ca,
+    #0070f3,
+    #00dfd8,
+    #ff007f
+  );
+  background-size: 400% 400%;
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(12px);
+  opacity: 0.6;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  animation: glowAnimation 8s ease infinite;
+}
+
+/* Hover & Active Effects */
+.glow-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.glow-btn:hover::before {
+  opacity: 1;
+  filter: blur(16px);
+}
+
+.glow-btn:active {
+  transform: translateY(0);
+}
+
+.glow-btn .btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animation Keyframes */
+@keyframes glowAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive Adjustments for Small Mobile Devices */
+@media (max-width: 580px) {
+  .resume-btn-container {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .glow-btn {
+    padding: 10px 28px;
+    font-size: 14px;
+  }
+}
+
+.project-preview-img {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.project-preview-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Smooth zoom effect when hovering over the image */
+.project-preview-img:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* Centered & Resized Intro Video */
+.about-video-container {
+  width: 100%;
+  max-width: 380px;  /* Adjust width size here (e.g. 320px - 400px) */
+  margin: 20px auto; /* 'auto' centers the container horizontally */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about-video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
