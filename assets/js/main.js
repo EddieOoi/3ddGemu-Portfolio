@@ -274,3 +274,63 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+/* ===================================================
+   Global Portfolio Automation (Copyright & Video)
+   =================================================== */
+document.addEventListener("DOMContentLoaded", function () {
+  
+  // 1. DYNAMIC COPYRIGHT YEAR AUTOMATION (Applies to all pages)
+  const copyrightElement = document.getElementById("copyright-year");
+  if (copyrightElement) {
+    const currentYear = new Date().getFullYear();
+    const startYear = 2025;
+    if (currentYear > startYear) {
+      copyrightElement.textContent = `${startYear} – ${currentYear}`;
+    } else {
+      copyrightElement.textContent = `${startYear}`;
+    }
+  }
+
+  // 2. VIDEO AUTOPLAY AUTOMATION (Safely skipped if video doesn't exist)
+  const introVideo = document.getElementById("about-intro-video");
+
+  if (introVideo) {
+    let hasPlayed = false;
+
+    function playIntroVideo() {
+      if (!hasPlayed) {
+        introVideo.play()
+          .then(() => {
+            hasPlayed = true;
+          })
+          .catch((error) => {
+            console.log("Autoplay waiting for user interaction:", error);
+          });
+      }
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            playIntroVideo();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(introVideo);
+
+    const navLinks = document.querySelectorAll('.navmenu a, .nav-link');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', function () {
+        const href = this.getAttribute('href') || '';
+        if (href.includes('resume') || href.includes('about')) {
+          setTimeout(playIntroVideo, 400);
+        }
+      });
+    });
+  }
+});
