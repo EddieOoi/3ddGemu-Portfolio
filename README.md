@@ -23,12 +23,12 @@ Welcome to **3ddGemu-Portfolio**! This repository houses my personal interactive
 
 | Project | Domain / Category | Key Tech & Features | View Details |
 | :--- | :--- | :--- | :---: |
-| 🎓 **FYP: Speak Up!** | Multi-Agent Gen-AI / VR | OpenAI Whisper, ChatGPT, TTS, Ready Player Me | [Explore](portfolio-fyp.html) |
-| 🥽 **Virtual Reality Projects** | VR / Immersion | Unity 3D, C#, VR Interactions | [Explore](portfolio-vr.html) |
-| 🏞️ **Procedural Terrain** | Graphics Programming | Voronoi Diagrams, Algorithmic Generation | [Explore](portfolio-voronoiproceduralgenterrain.html) |
-| 🏃 **Tagkour** | Game Dev / Movement | Parkour Mechanics, Dynamic Gameplay | [Explore](portfolio-tagkour.html) |
-| 🚀 **Spaceship Xtreme** | Arcade / Game Programming | Graphics Programming, C++, Shader Pipeline | [Explore](portfolio-spaceshipxtreme.html) |
-| 📱 **Mobile App Dev** | Application Development | Cross-platform UI, Real-time state | [Explore](portfolio-mobileappdev.html) |
+| 🎓 **FYP: Speak Up!** | Multi-Agent Gen-AI / VR | OpenAI Whisper, ChatGPT, TTS, Ready Player Me | [Explore](https://eddieooi.github.io/3ddGemu-Portfolio/portfolio-fyp.html) |
+| 🥽 **Virtual Reality Projects** | VR / Immersion | Unity 3D, C#, VR Interactions | [Explore](https://eddieooi.github.io/3ddGemu-Portfolio/portfolio-virnect.html) |
+| 🏞️ **Procedural Terrain** | Graphics Programming | Voronoi Diagrams, Algorithmic Generation | [Explore](https://eddieooi.github.io/3ddGemu-Portfolio/portfolio-voronoiproceduralgenterrain.html) |
+| 🏃 **Tagkour** | Game Design / Movement | Parkour Mechanics, Dynamic Gameplay | [Explore](https://eddieooi.github.io/3ddGemu-Portfolio/portfolio-tagkour.html) |
+| 🚀 **Spaceship Xtreme** | Arcade / Game Programming | Graphics Programming, C++, Shader Pipeline | [Explore](https://eddieooi.github.io/3ddGemu-Portfolio/portfolio-spaceshipxtreme.html) |
+| 📱 **Mobile App Dev** | Application Development | Cross-platform UI, Real-time state | [Explore](https://eddieooi.github.io/3ddGemu-Portfolio/portfolio-mobileappdev.html) |
 
 ---
 
