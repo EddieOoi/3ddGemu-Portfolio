@@ -26,6 +26,18 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom CSS to fix slider video/image sizing -->
+  <style>
+    .portfolio-details-slider video,
+    .portfolio-details-slider img {
+      width: 100%;
+      height: 500px; /* Forces a consistent height */
+      object-fit: contain; /* Prevents stretching and cropping */
+      background-color: #060606; /* Dark background to fill empty space */
+      border-radius: 10px; /* Subtle rounded corners */
+    }
+  </style>
 </head>
 
 <body class="portfolio-details-page">
