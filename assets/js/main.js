@@ -227,3 +227,110 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("about-intro-video");
+
+  if (video) {
+    let hasPlayed = false;
+
+    // Helper function to safely attempt playback
+    function triggerVideoPlay() {
+      if (!hasPlayed) {
+        video.play()
+          .then(() => {
+            hasPlayed = true; // Ensures it autoplays only once
+          })
+          .catch((err) => {
+            console.log("Autoplay waiting for user interaction:", err);
+          });
+      }
+    }
+
+    // 1. Intersection Observer for Scroll-based page layouts
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            triggerVideoPlay();
+          }
+        });
+      },
+      { threshold: 0.3 } // Triggers when 30% of the video is visible
+    );
+
+    observer.observe(video);
+
+    // 2. Tab Navigation Listener (for portfolio templates that use SPA tab switching)
+    const navLinks = document.querySelectorAll('.navmenu a, .nav-link, [data-page]');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', function () {
+        // Check if user clicked Resume or About tab
+        const href = this.getAttribute('href') || '';
+        if (href.includes('resume') || href.includes('about')) {
+          setTimeout(triggerVideoPlay, 400); // Small delay to wait for tab section fade-in
+        }
+      });
+    });
+  }
+});
+
+/* ===================================================
+   Global Portfolio Automation (Copyright & Video)
+   =================================================== */
+document.addEventListener("DOMContentLoaded", function () {
+  
+  // 1. DYNAMIC COPYRIGHT YEAR AUTOMATION (Applies to all pages)
+  const copyrightElement = document.getElementById("copyright-year");
+  if (copyrightElement) {
+    const currentYear = new Date().getFullYear();
+    const startYear = 2025;
+    if (currentYear > startYear) {
+      copyrightElement.textContent = `${startYear} – ${currentYear}`;
+    } else {
+      copyrightElement.textContent = `${startYear}`;
+    }
+  }
+
+  // 2. VIDEO AUTOPLAY AUTOMATION (Safely skipped if video doesn't exist)
+  const introVideo = document.getElementById("about-intro-video");
+
+  if (introVideo) {
+    let hasPlayed = false;
+
+    function playIntroVideo() {
+      if (!hasPlayed) {
+        introVideo.play()
+          .then(() => {
+            hasPlayed = true;
+          })
+          .catch((error) => {
+            console.log("Autoplay waiting for user interaction:", error);
+          });
+      }
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            playIntroVideo();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(introVideo);
+
+    const navLinks = document.querySelectorAll('.navmenu a, .nav-link');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', function () {
+        const href = this.getAttribute('href') || '';
+        if (href.includes('resume') || href.includes('about')) {
+          setTimeout(playIntroVideo, 400);
+        }
+      });
+    });
+  }
+});

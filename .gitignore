@@ -1,0 +1,44 @@
+# ============================================================
+# Sensitive information — DO NOT COMMIT
+# ============================================================
+
+# Claude Code local config contains API keys / auth tokens
+.claude/
+
+# Environment / secret files
+.env
+.env.*
+*.env
+.env.local
+.env.development
+.env.production
+
+# Credentials, keys, and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*-secret*
+*secret*.json
+*secrets*.json
+credentials.json
+
+# Cloud / service account keys
+firebase-key.json
+service-account*.json
+.gcloud/
+
+# ============================================================
+# OS / editor noise (optional but recommended)
+# ============================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/

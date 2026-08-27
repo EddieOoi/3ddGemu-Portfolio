@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - n8n Daily Digest</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/3DDGamuStudioPixelLogo.png" rel="icon">
+  <link href="assets/img/3DDGamuStudioPixelLogo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom CSS for the showcase video -->
+  <style>
+    .portfolio-video-wrapper {
+      width: 100%;
+      background-color: #060606;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .portfolio-video-wrapper video {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      display: block;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html#hero">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+        <h1>n8n Daily Digest</h1>
+        <h4>
+          An automated daily briefing workflow built in n8n that synthesizes multi-source intelligence into a single, actionable Slack message each morning.
+        </h4>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <!-- Showcase video replaces the image slider -->
+        <div class="portfolio-video-wrapper">
+          <video
+            src="assets/img/portfolio/n8n/n8n-project.mp4"
+            poster="assets/img/portfolio/n8n/n8n-poster.jpg"
+            controls
+            playsinline
+            preload="metadata">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>About the Project</h2>
+              <p>
+                <strong>n8n Daily Digest</strong> is an automation workflow that consolidates your scattered daily data—weather, calendar, news, notes, and task boards—into one clean, AI-written briefing delivered straight to Slack every morning. Instead of checking five different apps, you wake up to a single, conversational summary with structured Markdown lists of what matters for the day ahead.
+              </p>
+
+              <h3>Key Features</h3>
+              <ul>
+                <li><strong>Multi-Source Intelligence:</strong> Parallel collection and merge of 5+ endpoints (weather, calendar, news, notes, boards) into a single JSON payload.</li>
+                <li><strong>Smart Filtering:</strong> Trello board/list ID filtering handled directly inside n8n code nodes using JavaScript.</li>
+                <li><strong>Graceful Degradation:</strong> "Continue On Fail" configured on fetch nodes so a single failing service never breaks the whole digest.</li>
+                <li><strong>AI Summarization:</strong> Google Gemini prompts produce both a conversational briefing and structured Markdown lists from the merged data.</li>
+                <li><strong>Scheduled Delivery:</strong> A Cron trigger fires at 7 AM, builds a Slack payload, and posts the digest automatically.</li>
+              </ul>
+
+              <h3>How It Works</h3>
+              <ul>
+                <li><strong>Cron Trigger:</strong> Kicks off the workflow every morning at 7 AM.</li>
+                <li><strong>Parallel Collection:</strong> Branches fetch weather (OpenWeatherMap), calendar (Google Calendar), news (RSS), notes (Notion), and tasks (Trello) concurrently.</li>
+                <li><strong>Merge &amp; Transform:</strong> Merge nodes unify the branches; code nodes filter and shape the results.</li>
+                <li><strong>AI Formatting:</strong> The Gemini node turns the merged payload into friendly, readable text with action lists.</li>
+                <li><strong>Slack Delivery:</strong> A payload builder maps the result to Slack blocks and posts it via webhook.</li>
+              </ul>
+
+              <h3>Tech Stack</h3>
+              <ul>
+                <li><strong>Automation Platform:</strong> n8n (run locally via <code>npx n8n</code> / Node.js)</li>
+                <li><strong>AI:</strong> Google Gemini</li>
+                <li><strong>Integrations:</strong> Slack, OpenWeatherMap, Google Calendar, RSS, Notion, Trello</li>
+                <li><strong>Logic:</strong> Custom JavaScript code nodes &amp; Credential Manager</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Category</strong> Automation / Workflow</li>
+                  <li><strong>Type</strong> n8n Workflow</li>
+                  <li><strong>Tools</strong> n8n, Google Gemini, Slack, OpenWeatherMap, Google Calendar, RSS, Notion, Trello</li>
+                  <li><strong>Status</strong> Completed</li>
+                </ul>
+             <!-- Action Buttons Container -->
+              <div class="d-grid gap-2 mt-3">
+                <!-- GitHub Repository Button -->
+                <a href="https://github.com/EddieOoi/n8n-daily-digest" target="_blank" rel="noopener noreferrer" class="btn btn-primary d-flex align-items-center justify-content-center">
+                  <i class="bi bi-github me-2"></i> GitHub Repository
+                </a>
+
+                <!-- View Workflow Video Button -->
+                <a href="assets/img/portfolio/n8n/n8n-project.mp4" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark d-flex align-items-center justify-content-center">
+                  <i class="bi bi-play-circle me-2"></i> Watch Demo Video
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+<footer id="footer" class="footer position-relative light-background">
+  <div class="container text-center">
+    <h3 class="sitename">Wei Kit</h3>
+    <p>Game & XR Developer crafting immersive experiences through creativity, code, and curiosity.</p>
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://www.facebook.com/eddie.ooiweikit" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/weikit_001/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/eddieooi" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/EddieOoi" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://eddieooi.itch.io/delights-despair" target="_blank"><i class="bi bi-controller"></i></a>
+    </div>
+    <div class="copyright mt-3">
+      <span>©</span> <strong class="px-1 sitename">Wei Kit</strong> <span id="copyright-year">2026 | All Rights Reserved</span>
+    </div>
+    <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+
+</footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/ai/ai.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
