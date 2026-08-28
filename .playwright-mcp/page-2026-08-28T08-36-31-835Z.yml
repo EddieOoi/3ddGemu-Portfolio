@@ -1,0 +1,187 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - button "SKIP INTRO " [ref=e4] [cursor=pointer]:
+      - text: SKIP INTRO
+      - generic [ref=e5]: 
+    - generic [ref=e6]:
+      - heading "EDDIE OOI WEI KIT EDDIE OOI WEI KIT EDDIE OOI WEI KIT" [level=1] [ref=e7]
+      - paragraph [ref=e8]: XR & INTERACTIVE SOLUTIONS ENGINEER
+    - generic [ref=e10]:
+      - generic [ref=e11]: "19"
+      - generic [ref=e12]: "%"
+  - link "" [ref=e14] [cursor=pointer]:
+    - /url: https://www.facebook.com/eddie.ooiweikit
+  - link "" [ref=e16] [cursor=pointer]:
+    - /url: https://www.instagram.com/weikit_001/
+  - link "" [ref=e18] [cursor=pointer]:
+    - /url: https://www.linkedin.com/in/eddieooi
+  - link "" [ref=e20] [cursor=pointer]:
+    - /url: https://github.com/EddieOoi
+  - link "" [ref=e22] [cursor=pointer]:
+    - /url: https://eddieooi.itch.io/delights-despair
+  - link "linktr.ee/eddie.ooi":
+    - /url: https://linktr.ee/eddie.ooi
+  - progressbar
+  - progressbar
+  - progressbar
+  - progressbar
+  - progressbar
+  - progressbar
+  - progressbar
+  - progressbar
+  - progressbar
+  - progressbar
+  - link "Get My Resume":
+    - /url: assets/docs/Ooi Wei Kit_Resume.pdf
+  - listitem: All
+  - listitem: Game
+  - listitem: VR
+  - listitem: Others
+  - generic:
+    - heading "\"Delight's Despair”" [level=4]
+    - paragraph: First-person psychological horror game built in Unity
+    - link "":
+      - /url: assets/img/portfolio/dd/cover_dd2.png
+    - link "":
+      - /url: portfolio-delight's_despair.html
+  - generic:
+    - heading "Voronoi Procedural Generation Terrain" [level=4]
+    - paragraph: Research Algorithm
+    - link "":
+      - /url: assets/img/cgt_cover.png
+    - link "":
+      - /url: portfolio-voronoiproceduralgenterrain.html
+  - generic:
+    - heading "Delightful Shopping Experience" [level=4]
+    - paragraph: A VR simulation blending retail training and psychological horror
+    - link "":
+      - /url: assets/img/portfolio/vr/VR_1.png
+    - link "":
+      - /url: portfolio-vr.html
+  - generic:
+    - heading "Final Year Project - Speak Up!" [level=4]
+    - paragraph: Generative AI-Driven Multi-Agent VR Public Speaking Application
+    - link "":
+      - /url: assets/img/portfolio/fyp/fyp3.png
+    - link "":
+      - /url: portfolio-fyp.html
+  - generic:
+    - heading "Spaceship Xtreme" [level=4]
+    - paragraph: 2D Bullet Hell Survivor Game built with C++ and DirectX
+    - link "":
+      - /url: assets/img/portfolio/spaceshipxtreme/sx4.png
+    - link "":
+      - /url: portfolio-spaceshipxtreme.html
+  - generic:
+    - heading "AW Dsain Website (Freelance)" [level=4]
+    - paragraph: Responsive Corporate Website built with CodeIgniter and Bootstrap
+    - link "":
+      - /url: assets/img/portfolio/awdsain/Desktop_1.png
+    - link "":
+      - /url: portfolio-adwsain.html
+  - generic:
+    - heading "Graphic Programming" [level=4]
+    - paragraph: OpenGL, C++
+    - link "":
+      - /url: assets/img/gp_cover.png
+    - link "":
+      - /url: portfolio-graphicprogramming.html
+  - generic:
+    - heading "Tagkour" [level=4]
+    - paragraph: A Close Third-Person Cyberpunk Tag & Parkour Game Concept
+    - link "":
+      - /url: assets/img/portfolio/tagkour/Tagkour_Loading_Screen.png
+    - link "":
+      - /url: portfolio-tagkour.html
+  - generic:
+    - heading "Sanguine Echoes" [level=4]
+    - paragraph: A 2D gothic hack-and-slash roguelite built in Phaser 4 and TypeScript with frame-accurate combat and a Sanguine Rally healing system.
+    - link "":
+      - /url: assets/img/portfolio/sanguine_echoes/gameplay1.png
+    - link "":
+      - /url: portfolio-sanguine_echoes.html
+  - generic:
+    - heading "UMT Repository Redesign (HCI)" [level=4]
+    - paragraph: Human-Computer Interaction Project — UI/UX Redesign of UMT Institutional Repository
+    - link "":
+      - /url: assets/img/portfolio/hci/hci1.png
+    - link "":
+      - /url: portfolio-hci.html
+  - generic:
+    - heading "Java Programming" [level=4]
+    - paragraph: Point-Reward System
+    - link "":
+      - /url: assets/img/portfolio/java/Java_logo_icon.png
+    - link "":
+      - /url: portfolio-java.html
+  - generic:
+    - heading "Zero Waste Hub" [level=4]
+    - paragraph: Mobile App Development
+    - link "":
+      - /url: assets/img/mad_cover.png
+    - link "":
+      - /url: portfolio-mobileappdev.html
+  - generic:
+    - heading "VIRNECT" [level=4]
+    - paragraph: Industrial XR solutions for productivity and safety
+    - link "":
+      - /url: assets/img/portfolio/Virnect/virnect_portfolio.jpg
+    - link "":
+      - /url: portfolio-virnect.html
+  - generic:
+    - heading "WebGL Refraction Cube" [level=4]
+    - paragraph: An interactive 3D frosted glass cube built entirely with raw WebGL2 and Vanilla JS—no Three.js required.
+    - link "":
+      - /url: assets/img/portfolio/webgl/demo2.png
+    - link "":
+      - /url: portfolio-webgl.html
+  - generic:
+    - heading "Google Flow AI Video Generation" [level=4]
+    - paragraph: AI-driven commercial video production exploring cinematic workflows with Google Flow and Veo2.
+    - link "":
+      - /url: assets/img/portfolio/googleflow/thumbnail.jpg
+    - link "":
+      - /url: portfolio-googleflow.html
+  - generic:
+    - heading "n8n Daily Digest" [level=4]
+    - paragraph: An automated n8n workflow that synthesizes multi-source daily intelligence into a single Slack briefing with Google Gemini.
+    - link "":
+      - /url: assets/img/portfolio/n8n/n8n-poster.jpg
+    - link "":
+      - /url: portfolio-n8n.html
+  - generic:
+    - generic: 
+    - heading "VR/XR Development" [level=3]
+    - paragraph: Designing interactive virtual reality simulations in Unity — from immersive classrooms to AI-powered social experiences.
+  - generic:
+    - generic: 
+    - heading "Full-Stack Web Development" [level=3]
+    - paragraph: Building responsive and dynamic websites using modern frameworks like CodeIgniter, Bootstrap, and JavaScript for client projects.
+  - generic:
+    - generic: 
+    - heading "AI Integration" [level=3]
+    - paragraph: Implementing GPT-driven NPC dialogue and behavior systems for dynamic, personality-rich interactions in VR.
+  - generic:
+    - generic: 
+    - heading "Game & Simulation Design" [level=3]
+    - paragraph: Building gameplay mechanics, environment logic, and event-driven systems for interactive storytelling.
+  - generic:
+    - generic: 
+    - heading "Interactive System Design" [level=3]
+    - paragraph: Designing interaction logic for player experiences, including input handling, triggers, and feedback systems in Unity.
+  - generic:
+    - generic: 
+    - heading "Game UX & Acccesiblity Design" [level=3]
+    - paragraph: Designing intuitive VR menus and spatial interfaces that make immersive environments user-friendly and inclusive.
+  - link "" [ref=e24] [cursor=pointer]:
+    - /url: https://www.facebook.com/eddie.ooiweikit
+  - link "" [ref=e26] [cursor=pointer]:
+    - /url: https://www.instagram.com/weikit_001/
+  - link "" [ref=e28] [cursor=pointer]:
+    - /url: https://www.linkedin.com/in/eddieooi
+  - link "" [ref=e30] [cursor=pointer]:
+    - /url: https://github.com/EddieOoi
+  - link "" [ref=e32] [cursor=pointer]:
+    - /url: https://eddieooi.itch.io/delights-despair
+  - link "BootstrapMade" [ref=e34] [cursor=pointer]:
+    - /url: https://bootstrapmade.com/

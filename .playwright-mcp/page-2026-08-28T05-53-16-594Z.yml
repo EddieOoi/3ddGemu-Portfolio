@@ -1,0 +1,602 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e14]:
+    - generic [ref=e15] [cursor=pointer]: 
+    - navigation [ref=e16]:
+      - list [ref=e17]:
+        - listitem [ref=e18]:
+          - link " Home" [ref=e19] [cursor=pointer]:
+            - /url: "#hero"
+            - generic [ref=e20]: 
+            - generic [ref=e21]: Home
+        - listitem [ref=e22]:
+          - link " About" [ref=e23] [cursor=pointer]:
+            - /url: "#about"
+            - generic [ref=e24]: 
+            - generic [ref=e25]: About
+        - listitem [ref=e26]:
+          - link " Resume" [ref=e27] [cursor=pointer]:
+            - /url: "#resume"
+            - generic [ref=e28]: 
+            - generic [ref=e29]: Resume
+        - listitem [ref=e30]:
+          - link " Portfolio" [ref=e31] [cursor=pointer]:
+            - /url: "#portfolio"
+            - generic [ref=e32]: 
+            - generic [ref=e33]: Portfolio
+        - listitem [ref=e34]:
+          - link " Services" [ref=e35] [cursor=pointer]:
+            - /url: "#services"
+            - generic [ref=e36]: 
+            - generic [ref=e37]: Services
+        - listitem [ref=e38]:
+          - link " Contact" [ref=e39] [cursor=pointer]:
+            - /url: "#contact"
+            - generic [ref=e40]: 
+            - generic [ref=e41]: Contact
+  - main [ref=e42]:
+    - generic [ref=e46]:
+      - heading "Eddie Ooi Wei Kit" [level=2] [ref=e47]
+      - paragraph [ref=e48]: I'm XR Developer|
+      - generic [ref=e49]:
+        - link "" [ref=e50] [cursor=pointer]:
+          - /url: https://www.facebook.com/eddie.ooiweikit
+        - link "" [ref=e52] [cursor=pointer]:
+          - /url: https://www.instagram.com/weikit_001/
+        - link "" [ref=e54] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/eddieooi
+        - link "" [ref=e56] [cursor=pointer]:
+          - /url: https://github.com/EddieOoi
+        - link "" [ref=e58] [cursor=pointer]:
+          - /url: https://eddieooi.itch.io/delights-despair
+    - generic [ref=e60]:
+      - generic:
+        - heading "About" [level=2]
+        - paragraph: I am a technical problem-solver and interactive software developer dedicated to engineering next-generation experiences. With a foundation in Interactive Software Technology and hands-on work across XR, game development, and full-stack web, I build applications that blend reality, gameplay, and intelligence. Whether crafting frame-accurate combat systems in Phaser, integrating AI-driven NPCs in VR, or shipping responsive web experiences, my focus is always on optimized, human-centric solutions.
+      - generic:
+        - generic:
+          - generic:
+            - heading "Interactive Software & Game Developer" [level=2]
+            - paragraph: I design and develop immersive applications, games, and websites — turning ideas into interactive realities through clean code, creative design, and a love for playable experiences.
+            - generic:
+              - generic:
+                - list:
+                  - listitem:
+                    - generic: 
+                    - strong: "Birthday:"
+                    - generic: 12 August 2002
+                  - listitem:
+                    - generic: 
+                    - strong: "Website:"
+                    - generic:
+                      - link "linktr.ee/eddie.ooi":
+                        - /url: https://linktr.ee/eddie.ooi
+                  - listitem:
+                    - generic: 
+                    - strong: "Phone:"
+                    - generic: +60 11-2616 9814
+                  - listitem:
+                    - generic: 
+                    - strong: "City:"
+                    - generic: Selangor, MY
+              - generic:
+                - list:
+                  - listitem:
+                    - generic: 
+                    - strong: "Age:"
+                    - generic: "24"
+                  - listitem:
+                    - generic: 
+                    - strong: "Degree:"
+                    - generic: Bachelor in Computer Science
+                  - listitem:
+                    - generic: 
+                    - strong: "Email:"
+                    - generic: eddie.weikit@gmail.com
+                  - listitem:
+                    - generic: 
+                    - strong: "Freelance:"
+                    - generic: Available
+            - paragraph:
+              - text: I’ve worked on a wide range of projects — from VR learning simulations and AI-driven NPCs to web portfolios and freelance websites, and most recently browser-based games like
+              - strong: Sanguine Echoes
+              - text: ", a 2D gothic hack-and-slash roguelite built in Phaser 4 and TypeScript. My goal is to keep exploring how technology can enhance creativity, communication, play, and user experience."
+    - generic [ref=e61]:
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic:
+              - generic: "0"
+              - paragraph: Tools Mastered Along the Way
+          - generic:
+            - generic: 
+            - generic:
+              - generic: "0"
+              - paragraph: Games & Simulations Built
+          - generic:
+            - generic: 
+            - generic:
+              - generic: "0"
+              - paragraph: Lines of Code Written
+          - generic:
+            - generic: 
+            - generic:
+              - generic: "0"
+              - paragraph: Achievements & Awards
+    - generic [ref=e62]:
+      - generic:
+        - heading "Skills" [level=2]
+        - paragraph: I enjoy solving problems through clean, efficient code and modern frameworks. From front-end web design to back-end logic and Unity-based VR projects, I strive to create interactive and reliable solutions.
+        - generic:
+          - link " View my code on GitHub":
+            - /url: https://github.com/EddieOoi
+            - generic: 
+            - text: View my code on GitHub
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - text: Unity / C#
+                - generic: 80%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - text: VR / XR Development
+                - generic: 90%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - text: AI & LLM Integration (GPT, Gemini, Claude Code, Cursor, Whisper)
+                - generic: 80%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - text: Phaser / TypeScript
+                - generic: 85%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - text: WebGL / Graphics Programming
+                - generic: 80%
+              - generic:
+                - progressbar
+          - generic:
+            - generic:
+              - generic:
+                - text: PHP / CodeIgniter
+                - generic: 80%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - text: HTML / CSS / JavaScript
+                - generic: 90%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - text: UI/UX Design
+                - generic: 75%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - text: Flutter / Dart
+                - generic: 75%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - text: n8n / AI Workflow Automation
+                - generic: 70%
+              - generic:
+                - progressbar
+    - generic [ref=e63]:
+      - generic:
+        - heading "Resume" [level=2]
+        - generic:
+          - link "Get My Resume":
+            - /url: assets/docs/Ooi Wei Kit_Resume.pdf
+        - paragraph: Passionate and detail-oriented XR and full-stack developer with hands-on experience in Unity, C#, and OpenAI integrations. Skilled in creating immersive VR experiences and intelligent NPC systems using cutting-edge AI technologies. Always eager to learn, collaborate, and turn creative ideas into impactful digital experiences.
+      - generic [ref=e65]:
+        - generic:
+          - heading "Summary" [level=3]
+          - generic:
+            - heading "Hi, my name is Wei Kit!" [level=4]
+            - paragraph:
+              - emphasis: I’m an XR & Interactive Solutions Engineer specializing in bridging spatial computing with robust full-stack software architectures to solve complex technical challenges.
+            - list:
+              - listitem:
+                - strong: "Role:"
+                - text: XR & Interactive Solutions Engineer
+              - listitem:
+                - strong: "Power-up:"
+                - text: System Architecture + Immersive Tech
+              - listitem:
+                - strong: "Mission:"
+                - text: Transforming complex client requirements into scalable, high-performance digital realities.
+            - generic: Your browser does not support the video tag.
+          - heading "Education" [level=3]
+          - generic:
+            - heading "Bachelor of Computer Science (Honours) in Interactive Software Technology" [level=4]
+            - generic:
+              - heading "2023 - 2026" [level=5]
+              - generic:
+                - img "TARUMT Logo"
+            - paragraph:
+              - emphasis: Tunku Abdul Rahman University of Management and Technology(TARUMT)
+            - paragraph: Focusing on the convergence of spatial computing, software architecture, and interactive design to build next-generation digital experiences. My academic projects emphasize immersive XR development, intuitive human-computer interaction (HCI), and intelligent systems featuring AI-driven NPCs.
+            - paragraph: Additionally, I specialize in cross-platform and game engineering—architecting responsive web applications, developing versatile mobile solutions using Flutter, and programming high-performance game systems in C++.
+          - generic:
+            - heading "Diploma in Information Technology" [level=4]
+            - generic:
+              - heading "2021 - 2023" [level=5]
+              - generic:
+                - img "MAHSA University Logo"
+            - paragraph:
+              - emphasis: MAHSA University, Malaysia
+            - paragraph: Established technical foundation in software engineering, full-stack web development, and database architecture. Through an industry-aligned curriculum, I gained hands-on experience with object-oriented programming (C++), multimedia technology, and mobile computing.
+            - paragraph: My core academic projects focused on bridging intuitive front-end user experiences with secure back-end integration, utilizing PHP, JavaScript, and MySQL to design, deploy, and manage responsive web applications.
+            - img "Developer Animation"
+        - generic:
+          - heading "Working Experience" [level=3]
+          - generic:
+            - heading "THEXRA SDN BHD" [level=4]
+            - generic:
+              - heading "May 2026 - August 2026" [level=5]
+              - generic:
+                - img "Thexra Logo"
+            - paragraph:
+              - strong: Associate Solutions Engineer (Full-time)
+            - list:
+              - listitem: Engineered immersive XR and AI-driven applications designed to maximize industrial productivity and enhance operational safety.
+              - listitem: Transformed complex field engineering processes into interactive digital assets, significantly reducing onboarding and training time for new hires.
+              - listitem: Leveraged game development principles and interactive mechanics to address critical skill gaps across the safety training SOPs.
+              - listitem: Conducted continuous R&D on cutting-edge AI and emerging technologies, leveraging technical findings to formulate and deliver strategic business proposals for enterprise clients.
+              - listitem: Designed and facilitated a comprehensive XR development curriculum for the CelcomDigi Metaversity Internship Programme, guiding a 5-person intern team through a structured, two-phase project lifecycle.
+            - heading "Nov 2025 - May 2026" [level=5]
+            - paragraph:
+              - strong: XR Coordinator Intern
+            - list:
+              - listitem: Developed and optimized immersive AR/VR applications using Unity, while designing and modeling custom 3D assets and environments using Blender.
+              - listitem: Assisted in the end-to-end building and deployment of enterprise XR solutions via the Virnect platform, supporting both development and implementation phases.
+              - listitem: Conducted R&D and testing on emerging XR hardware and software, creating functional prototypes to explore new features and enhance the overall user experience.
+              - listitem: Facilitated client demonstrations, exhibitions, and special events by configuring and troubleshooting XR headsets and sensory hardware to ensure seamless live experiences.
+              - listitem: Collaborated with cross-functional teams of developers, designers, and project managers to conduct QA testing, identify bugs, and streamline the XR development workflow.
+              - listitem: Supported the organization and execution of technical workshops, serving as an on-site technical specialist to provide real-time troubleshooting and resolve attendee queries on the spot.
+          - generic:
+            - heading "Jacvid Technology Supply & Service" [level=4]
+            - generic:
+              - heading "Mar 2023 - June 2023" [level=5]
+              - generic:
+                - img "Jacvid Logo"
+            - paragraph:
+              - strong: Web Developer and Content Producer
+            - list:
+              - listitem: Managed backend servers for e-commerce platforms (jacmore.com, Shopee, Lazada)
+              - listitem: Enhanced UI/UX with responsive front-end development (HTML, CSS, JS)
+              - listitem: Produced and edited promotional videos to boost digital engagement across platforms
+              - listitem: Designed product showcase visuals and social media ads to increase customer interaction
+          - generic:
+            - heading "ArrayHubs" [level=4]
+            - generic:
+              - heading "Aug 2022 - Feb 2023" [level=5]
+              - generic:
+                - img "ArrayHubs Logo"
+            - paragraph:
+              - strong: Software Developer Intern
+            - list:
+              - listitem: Assisted in developing and maintaining web applications using the CodeIgniter MVC framework
+              - listitem: Customized WordPress CMS platforms to meet diverse client requirements
+              - listitem: Managed and optimized MySQL databases through phpMyAdmin, improving query performance
+              - listitem: Built responsive front-end components using HTML, CSS, JavaScript, Bootstrap, and jQuery
+    - generic [ref=e66]:
+      - generic:
+        - heading "Portfolio" [level=2]
+        - paragraph: A collection of my favorite creations — from virtual worlds to AI-powered NPCs. Every project here started with a “what if?” and became something you can explore, play, and experience.
+      - generic [ref=e68]:
+        - list:
+          - listitem: All
+          - listitem: Game
+          - listitem: VR
+          - listitem: Others
+        - generic:
+          - generic:
+            - generic:
+              - heading "\"Delight's Despair”" [level=4]
+              - paragraph: First-person psychological horror game built in Unity
+              - link "":
+                - /url: assets/img/portfolio/dd/cover_dd2.png
+              - link "":
+                - /url: portfolio-delight's_despair.html
+          - generic:
+            - generic:
+              - heading "Voronoi Procedural Generation Terrain" [level=4]
+              - paragraph: Research Algorithm
+              - link "":
+                - /url: assets/img/cgt_cover.png
+              - link "":
+                - /url: portfolio-voronoiproceduralgenterrain.html
+          - generic:
+            - generic:
+              - heading "Delightful Shopping Experience" [level=4]
+              - paragraph: A VR simulation blending retail training and psychological horror
+              - link "":
+                - /url: assets/img/portfolio/vr/VR_1.png
+              - link "":
+                - /url: portfolio-vr.html
+          - generic:
+            - generic:
+              - heading "Final Year Project - Speak Up!" [level=4]
+              - paragraph: Generative AI-Driven Multi-Agent VR Public Speaking Application
+              - link "":
+                - /url: assets/img/portfolio/fyp/fyp3.png
+              - link "":
+                - /url: portfolio-fyp.html
+          - generic:
+            - generic:
+              - heading "Spaceship Xtreme" [level=4]
+              - paragraph: 2D Bullet Hell Survivor Game built with C++ and DirectX
+              - link "":
+                - /url: assets/img/portfolio/spaceshipxtreme/sx4.png
+              - link "":
+                - /url: portfolio-spaceshipxtreme.html
+          - generic:
+            - generic:
+              - heading "AW Dsain Website (Freelance)" [level=4]
+              - paragraph: Responsive Corporate Website built with CodeIgniter and Bootstrap
+              - link "":
+                - /url: assets/img/portfolio/awdsain/Desktop_1.png
+              - link "":
+                - /url: portfolio-adwsain.html
+          - generic:
+            - generic:
+              - heading "Graphic Programming" [level=4]
+              - paragraph: OpenGL, C++
+              - link "":
+                - /url: assets/img/gp_cover.png
+              - link "":
+                - /url: portfolio-graphicprogramming.html
+          - generic:
+            - generic:
+              - heading "Tagkour" [level=4]
+              - paragraph: A Close Third-Person Cyberpunk Tag & Parkour Game Concept
+              - link "":
+                - /url: assets/img/portfolio/tagkour/Tagkour_Loading_Screen.png
+              - link "":
+                - /url: portfolio-tagkour.html
+          - generic:
+            - img "Sanguine Echoes"
+            - generic:
+              - heading "Sanguine Echoes" [level=4]
+              - paragraph: A 2D gothic hack-and-slash roguelite built in Phaser 4 and TypeScript with frame-accurate combat and a Sanguine Rally healing system.
+              - link "":
+                - /url: assets/img/portfolio/sanguine_echoes/gameplay1.png
+              - link "":
+                - /url: portfolio-sanguine_echoes.html
+          - generic:
+            - generic:
+              - heading "UMT Repository Redesign (HCI)" [level=4]
+              - paragraph: Human-Computer Interaction Project — UI/UX Redesign of UMT Institutional Repository
+              - link "":
+                - /url: assets/img/portfolio/hci/hci1.png
+              - link "":
+                - /url: portfolio-hci.html
+          - generic:
+            - generic:
+              - heading "Java Programming" [level=4]
+              - paragraph: Point-Reward System
+              - link "":
+                - /url: assets/img/portfolio/java/Java_logo_icon.png
+              - link "":
+                - /url: portfolio-java.html
+          - generic:
+            - generic:
+              - heading "Zero Waste Hub" [level=4]
+              - paragraph: Mobile App Development
+              - link "":
+                - /url: assets/img/mad_cover.png
+              - link "":
+                - /url: portfolio-mobileappdev.html
+          - generic:
+            - generic:
+              - heading "VIRNECT" [level=4]
+              - paragraph: Industrial XR solutions for productivity and safety
+              - link "":
+                - /url: assets/img/portfolio/Virnect/virnect_portfolio.jpg
+              - link "":
+                - /url: portfolio-virnect.html
+          - generic:
+            - generic:
+              - heading "WebGL Refraction Cube" [level=4]
+              - paragraph: An interactive 3D frosted glass cube built entirely with raw WebGL2 and Vanilla JS—no Three.js required.
+              - link "":
+                - /url: assets/img/portfolio/webgl/demo2.png
+              - link "":
+                - /url: portfolio-webgl.html
+          - generic:
+            - img "Google Flow AI Video Generation"
+            - generic:
+              - heading "Google Flow AI Video Generation" [level=4]
+              - paragraph: AI-driven commercial video production exploring cinematic workflows with Google Flow and Veo2.
+              - link "":
+                - /url: assets/img/portfolio/googleflow/thumbnail.jpg
+              - link "":
+                - /url: portfolio-googleflow.html
+          - generic:
+            - img "n8n Daily Digest"
+            - generic:
+              - heading "n8n Daily Digest" [level=4]
+              - paragraph: An automated n8n workflow that synthesizes multi-source daily intelligence into a single Slack briefing with Google Gemini.
+              - link "":
+                - /url: assets/img/portfolio/n8n/n8n-poster.jpg
+              - link "":
+                - /url: portfolio-n8n.html
+    - generic [ref=e69]:
+      - generic:
+        - heading "Services" [level=2]
+        - paragraph: I create immersive, interactive, and technically refined digital experiences — blending real-time 3D graphics, AI, and XR design to push creative boundaries.
+      - generic [ref=e71]:
+        - generic:
+          - generic:
+            - generic: 
+            - heading "VR/XR Development" [level=3]
+            - paragraph: Designing interactive virtual reality simulations in Unity — from immersive classrooms to AI-powered social experiences.
+        - generic:
+          - generic:
+            - generic: 
+            - heading "Full-Stack Web Development" [level=3]
+            - paragraph: Building responsive and dynamic websites using modern frameworks like CodeIgniter, Bootstrap, and JavaScript for client projects.
+        - generic:
+          - generic:
+            - generic: 
+            - heading "AI Integration" [level=3]
+            - paragraph: Implementing GPT-driven NPC dialogue and behavior systems for dynamic, personality-rich interactions in VR.
+        - generic:
+          - generic:
+            - generic: 
+            - heading "Game & Simulation Design" [level=3]
+            - paragraph: Building gameplay mechanics, environment logic, and event-driven systems for interactive storytelling.
+        - generic:
+          - generic:
+            - generic: 
+            - heading "Interactive System Design" [level=3]
+            - paragraph: Designing interaction logic for player experiences, including input handling, triggers, and feedback systems in Unity.
+        - generic:
+          - generic:
+            - generic: 
+            - heading "Game UX & Acccesiblity Design" [level=3]
+            - paragraph: Designing intuitive VR menus and spatial interfaces that make immersive environments user-friendly and inclusive.
+    - generic [ref=e72]:
+      - generic:
+        - heading "Testimonials" [level=2]
+        - paragraph: What mentors, peers, and collaborators say about my work and projects.
+      - generic:
+        - generic:
+          - generic:
+            - group "1 / 4":
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - paragraph:
+                        - generic: 
+                        - text: Wei Kit consistently demonstrates strong technical depth in both VR and game programming. His XR projects show a unique balance of creativity, interactivity, and optimization — qualities rare at a student level.
+                        - generic: 
+                      - heading "Dr.Tan" [level=3]
+                      - heading "Lecturer, Game & XR Development" [level=4]
+                      - generic:
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                  - generic:
+                    - img "Dr. Tan"
+            - group "2 / 4":
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - paragraph:
+                        - generic: 
+                        - text: I collaborated with Wei Kit on a Unity VR project — his ability to integrate AI-driven NPC behavior and natural conversation systems made the experience feel alive and immersive.
+                        - generic: 
+                      - heading "Jason Lee" [level=3]
+                      - heading "Teammate, VR Development Project" [level=4]
+                      - generic:
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                  - generic:
+                    - img "Jason Lee"
+            - group "3 / 4":
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - paragraph:
+                        - generic: 
+                        - text: Testing Wei Kit’s VR FYP project was an incredible experience — the NPC interactions felt natural, and the immersive environment made the conversation system stand out as both innovative and engaging.
+                        - generic: 
+                      - heading "Mr Pua" [level=3]
+                      - heading "Beta Tester, VR FYP Project - Speak Up!" [level=4]
+                      - generic:
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                  - generic:
+                    - img "Mr Pua"
+            - group "4 / 4":
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - paragraph:
+                        - generic: 
+                        - text: Working alongside Wei Kit on interactive projects was brilliant. His ability to bridge complex spatial computing concepts with high-performance software systems is exceptional, and he effortlessly handles front-end optimization without losing architectural stability.
+                        - generic: 
+                      - heading "Xin Yi" [level=3]
+                      - heading "Project Partner" [level=4]
+                      - generic:
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                        - generic: 
+                  - generic:
+                    - img "Xin Yi"
+          - generic:
+            - button "Go to slide 1"
+            - button "Go to slide 2"
+            - button "Go to slide 3"
+            - button "Go to slide 4"
+    - generic [ref=e73]:
+      - generic:
+        - heading "Let's Connect!" [level=2]
+        - paragraph: If you'd like to collaborate or learn more about my work, feel free to reach out through any of the platforms below.
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - heading "WhatsApp Me" [level=3]
+              - paragraph: Scan the QR code below or click the button to start a chat with me directly.
+              - img "WhatsApp QR Code"
+              - generic:
+                - link " Chat on WhatsApp":
+                  - /url: https://wa.me/601126169814
+                  - generic: 
+                  - text: Chat on WhatsApp
+  - contentinfo [ref=e74]:
+    - generic [ref=e75]:
+      - heading "Wei Kit" [level=3] [ref=e76]
+      - paragraph [ref=e77]: Game & XR Developer crafting immersive experiences through creativity, code, and curiosity.
+      - generic [ref=e78]:
+        - link "" [ref=e79] [cursor=pointer]:
+          - /url: https://www.facebook.com/eddie.ooiweikit
+        - link "" [ref=e81] [cursor=pointer]:
+          - /url: https://www.instagram.com/weikit_001/
+        - link "" [ref=e83] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/eddieooi
+        - link "" [ref=e85] [cursor=pointer]:
+          - /url: https://github.com/EddieOoi
+        - link "" [ref=e87] [cursor=pointer]:
+          - /url: https://eddieooi.itch.io/delights-despair
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - text: ©
+          - strong [ref=e91]: Wei Kit
+          - text: 2025 – 2026 | All Rights Reserved
+        - generic [ref=e92]:
+          - text: Designed by
+          - link "BootstrapMade" [ref=e93] [cursor=pointer]:
+            - /url: https://bootstrapmade.com/

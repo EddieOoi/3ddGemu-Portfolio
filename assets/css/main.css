@@ -339,41 +339,6 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  overflow: hidden;
-  background: var(--background-color);
-  transition: all 0.6s ease-out;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
@@ -1655,4 +1620,556 @@ section,
   height: auto;
   display: block;
   border-radius: 12px;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed; inset: 0; z-index: 999999;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--background-color, #ffffff);
+  transition: opacity .5s ease, visibility .5s ease;
+}
+
+#preloader.preloader-hidden { opacity: 0; visibility: hidden; }
+
+.preloader-bar {
+  width: 220px; height: 2px; margin: 0 auto 18px;
+  background: rgba(255,255,255,.08);
+  position: relative; overflow: hidden;
+}
+
+.preloader-bar::after {
+  content: ""; position: absolute; top: 0; left: -40%;
+  width: 40%; height: 100%;
+  background: var(--accent-color, #0563bb);
+  box-shadow: 0 0 8px var(--accent-color, #0563bb);
+  animation: preloader-scan 1.1s ease-in-out infinite;
+}
+
+@keyframes preloader-scan {
+  0% { left: -40%; } 50% { left: 60%; } 100% { left: 100%; }
+}
+
+.preloader-text {
+  position: relative; display: inline-block;
+  font-family: monospace; letter-spacing: 6px; font-size: 14px;
+  color: var(--accent-color, #0563bb); text-transform: uppercase;
+}
+
+.preloader-text::before, .preloader-text::after {
+  content: attr(data-text); position: absolute; left: 0; top: 0;
+  width: 100%; overflow: hidden; color: var(--accent-color, #0563bb); opacity: .7;
+}
+
+.preloader-text::before { animation: glitch-1 2.4s infinite linear alternate-reverse; clip-path: inset(0 0 60% 0); }
+.preloader-text::after  { animation: glitch-2 2.4s infinite linear alternate-reverse; clip-path: inset(60% 0 0 0); }
+
+@keyframes glitch-1 { 0%{transform:translate(0,0)} 20%{transform:translate(-2px,1px)} 40%{transform:translate(2px,-1px)} 60%{transform:translate(-1px,0)} 80%{transform:translate(1px,1px)} 100%{transform:translate(0,0)} }
+@keyframes glitch-2 { 0%{transform:translate(0,0)} 20%{transform:translate(2px,-1px)} 40%{transform:translate(-2px,1px)} 60%{transform:translate(1px,0)} 80%{transform:translate(-1px,-1px)} 100%{transform:translate(0,0)} }
+
+/*--------------------------------------------------------------
+# Custom Cursor (dot + trailing ring)
+--------------------------------------------------------------*/
+#cursor-dot,
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999998;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+#cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-color, #0563bb);
+}
+
+#cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--accent-color, #0563bb);
+  background: transparent;
+  /* Transition only size/border-color, never transform (driven by rAF). */
+  transition: width .2s ease, height .2s ease, border-color .2s ease;
+}
+
+#cursor-ring.cursor-hover {
+  width: 56px;
+  height: 56px;
+  border-color: var(--accent-color, #0563bb);
+}
+
+/* Touch / coarse-pointer devices: no persistent pointer, hide it. */
+@media (hover: none), (pointer: coarse) {
+  #cursor-dot,
+  #cursor-ring {
+    display: none;
+  }
+}
+
+/* Reduced-motion users: no trailing animation, hide it. */
+@media (prefers-reduced-motion: reduce) {
+  #cursor-dot,
+  #cursor-ring {
+    display: none;
+  }
+}
+
+/* Hide the native cursor only on devices that actually get the custom one. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body {
+    cursor: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Initial Loader (session-gated intro, index.html only)
+--------------------------------------------------------------*/
+#initial-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999999;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  /* Driven per-frame by JS: white while the curtain is blue, lerping to
+     --accent-color as the curtain turns white. Every text layer below reads
+     this so the text color paces with the background. */
+  color: var(--loader-text, #ffffff);
+  /* Whole-loader crossfade out when .initial-loader-hidden is added. */
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Final hidden state: fully transparent + non-interactive while it fades. */
+#initial-loader.initial-loader-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* While the intro runs: lock scrolling and keep the home page hidden so it
+   can't be seen or scrolled behind the curtain. opacity:0 pairs with the
+   fade-in transition below for a seamless crossfade at the end. */
+html.initial-loading,
+body.initial-loading {
+  overflow: hidden;
+  height: 100%;
+}
+
+body.initial-loading > *:not(#initial-loader):not(#cursor-dot):not(#cursor-ring) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Home page fades IN as the preloader fades OUT (1.0s, in lockstep with the
+   1.2s loader fade) — a seamless visual crossfade. */
+#header,
+main,
+#hero {
+  transition: opacity 1.0s ease-in-out;
+}
+
+/* Belt-and-suspenders: guarantee the nav is hidden for the WHOLE intro,
+   independent of JS timing. The loader sits right before #header in the DOM
+   (general sibling ~), so this hides the header from first paint until the
+   loader gets .initial-loader-hidden (the reveal). Prevents any nav flash
+   before the JS lock class is applied. */
+#initial-loader:not(.initial-loader-hidden) ~ #header {
+  visibility: hidden;
+}
+
+/* The sliding color panel: starts blue, covers screen, slides out as
+   progress increases, and fades at the end. transform is progress-driven
+   (via JS, ease-out); opacity is used only for the final fade. */
+.initial-loader-curtain {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--accent-color, #0563bb);
+  /* Starts fully covering (no offset). */
+  transform: translateX(0);
+  will-change: transform;
+}
+
+/* Fast, separate hide for the preloader's own text block. Applied at the same
+   instant the reveal begins, but finishes (0.3s) well before the 1.2s loader
+   melt, so the home hero never sees the preloader text on top of it. */
+#initial-loader.loader-hide-title .initial-loader-left {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Skip button — top-right corner. Minimalist, white on blue. */
+.initial-loader-skip {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: transparent;
+  border: 1px solid var(--loader-text, rgba(255, 255, 255, 0.3));
+  color: var(--loader-text, #fff);
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.initial-loader-skip:hover {
+  transform: scale(1.06);
+  color: #0563bb;
+  border-color: #0563bb;
+  box-shadow: 0 0 14px rgba(5, 99, 187, 0.5);
+}
+
+.initial-loader-skip i {
+  font-size: 13px;
+}
+
+/* Content sits above the curtain. */
+.initial-loader-left,
+.initial-loader-right,
+.initial-loader-skip {
+  position: relative;
+  z-index: 1;
+}
+
+.initial-loader-left {
+  max-width: 70%;
+}
+
+.initial-loader-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 4vw, 48px);
+  font-family: monospace;
+  font-size: clamp(40px, 9vw, 96px);
+  font-weight: 700;
+  color: var(--loader-text, #ffffff);
+  text-shadow: 0 0 12px var(--loader-text, rgba(255, 255, 255, 0.6));
+  line-height: 1;
+}
+
+/* Horizontal dash line at the end (right edge) of the counter. */
+.initial-loader-dash {
+  flex-shrink: 0;
+  width: clamp(40px, 9vw, 120px);
+  height: 2px;
+  background: var(--loader-text, #ffffff);
+  box-shadow: 0 0 10px var(--loader-text, rgba(255, 255, 255, 0.6));
+}
+
+.initial-loader-pct {
+  font-size: 0.5em;
+  margin-left: 4px;
+}
+
+/* The text color paces with the background via --loader-text (set per-frame
+   by preloader.js), so no hard flip is needed. On skip or reduced-motion the
+   var falls back to white and the title/subtitle/counter use the blue-phase
+   default below. */
+
+/* Hide the counter + skip when the clean title-hold begins (at 100%). */
+#initial-loader.loader-hide-ui .initial-loader-right,
+#initial-loader.loader-hide-ui .initial-loader-skip {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.initial-loader-title {
+  position: relative;
+  margin: 0;
+  font-family: var(--heading-font, "Raleway", sans-serif);
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: clamp(22px, 5vw, 48px);
+  color: var(--loader-text, #ffffff);
+  text-transform: uppercase;
+  transition: color 0.1s linear, opacity 1s ease;
+}
+
+/* Glitch layers — two clipped copies that jitter on the title. */
+.initial-loader-title::before,
+.initial-loader-title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: var(--loader-text, #ffffff);
+  opacity: 0.7;
+  overflow: hidden;
+}
+
+.initial-loader-title::before {
+  animation: initial-glitch-1 2.4s infinite linear alternate-reverse;
+  clip-path: inset(0 0 60% 0);
+}
+
+.initial-loader-title::after {
+  animation: initial-glitch-2 2.4s infinite linear alternate-reverse;
+  clip-path: inset(60% 0 0 0);
+}
+
+@keyframes initial-glitch-1 {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-2px, 1px); }
+  40%  { transform: translate(2px, -1px); }
+  60%  { transform: translate(-1px, 0); }
+  80%  { transform: translate(1px, 1px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes initial-glitch-2 {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(2px, -1px); }
+  40%  { transform: translate(-2px, 1px); }
+  60%  { transform: translate(1px, 0); }
+  80%  { transform: translate(-1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.initial-loader-subtitle {
+  position: relative;
+  margin: 14px 0 20px;
+  font-family: var(--default-font, "Roboto", sans-serif);
+  letter-spacing: 5px;
+  font-size: clamp(11px, 2vw, 15px);
+  color: var(--loader-text, #ffffff);
+  text-transform: uppercase;
+  transition: color 0.1s linear, opacity 1s ease;
+}
+
+/* Glowing scanline accent below the subtitle. */
+.initial-loader-scan {
+  position: relative;
+  width: 240px;
+  max-width: 70vw;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+
+.initial-loader-scan::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: var(--loader-text, #ffffff);
+  box-shadow: 0 0 10px var(--loader-text, rgba(255, 255, 255, 0.8));
+  animation: initial-scan 1.1s ease-in-out infinite;
+}
+
+@keyframes initial-scan {
+  0%   { left: -40%; }
+  50%  { left: 60%; }
+  100% { left: 100%; }
+}
+
+/* Mobile: stack — name/subtitle top-left, counter bottom-right. */
+@media (max-width: 767px) {
+  #initial-loader {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  /* Pull the name/subtitle block to the top so it clears the skip button. */
+  .initial-loader-left {
+    max-width: 100%;
+    margin-top: 3rem; /* clear the top-right SKIP INTRO button */
+  }
+
+  /* Counter drops to the bottom-right corner. */
+  .initial-loader-right {
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Shrink the skip button inset on small screens so it never overlaps text. */
+  .initial-loader-skip {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Reduced-motion: skip the intro entirely. */
+@media (prefers-reduced-motion: reduce) {
+  #initial-loader {
+    display: none;
+  }
+}
+
+/* ==========================================
+   Sound Toggle Button in Nav
+   ========================================== */
+.navmenu .navmenu-sound-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-family: var(--nav-font);
+  color: var(--nav-color);
+  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+  height: 56px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navmenu .navmenu-sound-toggle:hover,
+.navmenu .navmenu-sound-toggle:focus {
+  color: var(--contrast-color);
+  background: var(--nav-hover-color);
+  max-width: 100%;
+  outline: none;
+}
+
+.navmenu .navmenu-sound-toggle:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 50%);
+}
+
+.navmenu .navmenu-sound-toggle:hover .sound-label,
+.navmenu .navmenu-sound-toggle:focus .sound-label {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .navmenu .navmenu-sound-toggle {
+    max-width: 56px;
+  }
+  .navmenu .navmenu-sound-toggle .sound-label {
+    display: none;
+  }
+  .navmenu .navmenu-sound-toggle:hover,
+  .navmenu .navmenu-sound-toggle:focus {
+    max-width: 100%;
+  }
+}
+
+/* Muted state */
+.navmenu .navmenu-sound-toggle.muted {
+  opacity: 0.6;
+}
+
+/* ==========================================
+   Sound Toggle Equalizer Wave Effect
+   ========================================== */
+.navmenu .navmenu-sound-toggle {
+  position: relative;
+  isolation: isolate;
+}
+
+.navmenu .navmenu-sound-toggle::before,
+.navmenu .navmenu-sound-toggle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  border: 2px solid var(--accent-color);
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1;
+  box-shadow: 0 0 10px rgba(5, 99, 187, 0.6), inset 0 0 10px rgba(5, 99, 187, 0.4);
+}
+
+.navmenu .navmenu-sound-toggle.is-playing::before {
+  animation: audio-wave-pulse 2s ease-out infinite;
+}
+
+.navmenu .navmenu-sound-toggle.is-playing::after {
+  animation: audio-wave-pulse 2s ease-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes audio-wave-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+    border-width: 2px;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* Equalizer bars on the right side when playing */
+.navmenu .navmenu-sound-toggle .sound-bars {
+  display: none;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+  margin-left: auto;
+  pointer-events: none;
+}
+
+.navmenu .navmenu-sound-toggle.is-playing .sound-bars {
+  display: flex;
+}
+
+.navmenu .navmenu-sound-toggle .sound-bars span {
+  display: block;
+  width: 2px;
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 2px;
+  box-shadow: 0 0 6px rgba(5, 99, 187, 0.6);
+  transform-origin: bottom;
+  animation: audio-bar-bounce 0.9s ease-in-out infinite;
+}
+
+.navmenu .navmenu-sound-toggle .sound-bars span:nth-child(1) { animation-delay: 0s; }
+.navmenu .navmenu-sound-toggle .sound-bars span:nth-child(2) { animation-delay: 0.2s; }
+.navmenu .navmenu-sound-toggle .sound-bars span:nth-child(3) { animation-delay: 0.4s; }
+.navmenu .navmenu-sound-toggle .sound-bars span:nth-child(4) { animation-delay: 0.1s; }
+
+@keyframes audio-bar-bounce {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .navmenu .navmenu-sound-toggle.is-playing::before,
+  .navmenu .navmenu-sound-toggle.is-playing::after {
+    animation: none;
+    opacity: 0;
+  }
+  .navmenu .navmenu-sound-toggle .sound-bars span {
+    animation: none;
+    transform: scaleY(0.6);
+  }
+  .navmenu .navmenu-sound-toggle .sound-bars {
+    display: none;
+  }
 }
