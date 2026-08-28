@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🎮 3ddGemu Portfolio
-**Interactive Personal Portfolio Showcase & Web Development Projects**
+**Interactive Personal Portfolio Showcase & Web Development Projects **
 
 <img src="assets/img/3ddGemuPortfolio_1.png" alt="Hero-Banner" width="100%" /></img>
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
