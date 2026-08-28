@@ -51,7 +51,10 @@
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      preloader.remove();
+      setTimeout(() => {
+        preloader.classList.add('preloader-hidden');
+        setTimeout(() => preloader.remove(), 600);
+      }, 400);
     });
   }
 
