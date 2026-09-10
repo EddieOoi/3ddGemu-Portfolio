@@ -849,11 +849,27 @@
 
           <div class="col-lg-6 text-center">
             <div class="contact-item">
+              <!-- Global Collaboration Radar -->
+              <div class="collaboration-radar-container" id="global-collaboration-radar">
+                <div class="radar-header">
+                  <h4>GLOBAL REACH &amp; AVAILABILITY</h4>
+                  <div class="radar-status-group">
+                    <span class="status-dot online"></span>
+                    <span class="radar-status-text">UTC+8 (Malaysia) — Available Worldwide</span>
+                  </div>
+                </div>
+                <div class="radar-map-wrapper" id="radar-map-wrapper">
+                  <!-- D3/TopoJSON choropleth renders here -->
+                  <div class="radar-loading">Loading map…</div>
+                </div>
+              </div>
+              <!-- /Global Collaboration Radar -->
+
               <h3>WhatsApp Me</h3>
               <p>Scan the QR code below or click the button to start a chat with me directly.</p>
 
               <!-- WhatsApp QR Code -->
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/601126169814" 
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/601126169814"
                    alt="WhatsApp QR Code" class="img-fluid rounded shadow mb-3" style="max-width:200px;">
 
               <!-- WhatsApp Direct Link -->
@@ -922,6 +938,11 @@
 
   <!-- Sound Manager -->
   <script src="assets/js/sound.js"></script>
+
+  <!-- Global Collaboration Radar Map -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+  <script src="assets/js/global-map.js"></script>
 </body>
 
 </html>
